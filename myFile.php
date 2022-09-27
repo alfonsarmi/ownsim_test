@@ -1,7 +1,7 @@
 <?php
 /**
  * the first club
- * 
+ *
  * @link    http://www.thefirstclub.com
  * @package app_module_content_model
  */
@@ -17,7 +17,7 @@ class Module_Content_Model extends Core_Model
     
     /**
      * Salesforce connection
-     * 
+     *
      * @var object
      */
     public $salesforce = null;
@@ -25,7 +25,7 @@ class Module_Content_Model extends Core_Model
     /**
      * Site content types
      * Format: content name => content type id
-     * 
+     *
      * @var array
      */
     public $content = array(
@@ -61,21 +61,21 @@ class Module_Content_Model extends Core_Model
     
     /**
      * Europe countries
-     * 
+     *
      * @var array
      */
     public $countriesEurope = array('AD','AL','AT','BA','BE','BG','BY','CH','CY','CZ','DK','EE','FI','FO','GG','GI','GR','HR','HU','IE','IM','IS','JE','LI','LT','LU','LV','MC','MD','MK','MT','NL','NO','PL','PT','RO','RU','SE','SI','SJ','SK','SM','TR','UA','UK','VA','YU','EU','FR','DE','GB','ES','IT', 'PT');
     
     /**
      * Special countries
-     * 
+     *
      * @var array
      */
     public $countriesSpecial = array('FR', 'DE', 'GB', 'ES', 'IT', 'US', 'CA', 'EU', 'SE', 'NO', 'FI', 'DK', 'IE', 'NL', 'BE', 'CH', 'ALL');
     
     /**
      * Countries by catalog
-     * 
+     *
      * @var array
      */
     public $cataloguesCountry = array(
@@ -94,7 +94,7 @@ class Module_Content_Model extends Core_Model
     /**
      * Available territories
      * Format: territory code => territory id
-     * 
+     *
      * @var array
      */
     public $catalogues = array(
@@ -125,7 +125,7 @@ class Module_Content_Model extends Core_Model
     /**
      * Available territories names
      * Format: territory code => territory name
-     * 
+     *
      * @var array
      */
     public $cataloguesNames = array(
@@ -156,49 +156,49 @@ class Module_Content_Model extends Core_Model
     
     /**
      * Available app currency
-     * 
+     *
      * @var array
      */
     public $availableCurrency = array('EUR', 'GBP', 'USD', 'CAD', 'AUD');
     
     /**
      * Available currencies by country
-     * 
+     *
      * @var array
      */
     public $currency = array('GB' => 'GBP', 'EN' => 'GBP', 'US' => 'USD', 'CA' => 'CAD', 'AT' => 'AUD');
     
     /**
      * Countries ids
-     * 
+     *
      * @var array
      */
     public $countriesId = array('GB'=>34, 'UK'=>34, 'US'=>480, 'EN'=>34, 'DE'=>265, 'FR'=>870, 'EU'=>481, 'ES'=>827, 'ALL'=>496, 'IT'=>820, 'CA'=>1069);
     
     /**
      * Pagination frames
-     * 
+     *
      * @var array
      */
     public $perPageSelect = array(50, 100, 250);
     
     /**
      * Letters used in products list
-     * 
+     *
      * @var array
      */
     public $letters = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
     
     /**
      * Letters divisions
-     * 
+     *
      * @var array
      */
     public $lettersDivisions = array('a-e', 'f-i', 'j-m', 'n-q', 'r-u', 'v-z');
     
     /**
      * Audio books languages
-     * 
+     *
      * @var array
      */
     public $abooksLanguages = array('ALL'=>'EN', 'EU'=>'EN', 'DE'=>'DE', 'ES'=>'ES', 'FR'=>'FR', 'IT'=>'IT', 'EN'=>'EN', 'US'=>'EN', 'CA'=>'EN', 'RU',
@@ -212,21 +212,21 @@ class Module_Content_Model extends Core_Model
     
     /**
      * Default audio books language
-     * 
+     *
      * @var string
      */
     public $abooksDefLang = 'EN';
     
     /**
      * Available audio books types
-     * 
+     *
      * @var array
      */
     public $abooksTypes = array('mp3' => array(1, 5), 'wma' => array(2));
     
     /**
      * E-books languages
-     * 
+     *
      * @var array
      */
     public $ebooksLanguages = array('ALL'=>'EN', 'EU'=>'EN', 'DE'=>'DE', 'ES'=>'ES', 'FR'=>'FR', 'IT'=>'IT', 'EN'=>'EN', 'US'=>'EN', 'CA'=>'EN', 'RU',
@@ -260,7 +260,7 @@ class Module_Content_Model extends Core_Model
     
     /**
      * Default e-books language
-     * 
+     *
      * @var string
      */
     public $ebooksDefLang = 'EN';
@@ -268,14 +268,14 @@ class Module_Content_Model extends Core_Model
     
     /**
      * Available e-books types
-     * 
+     *
      * @var array
      */
     public $ebooksTypes = array('Adobe PDF' => array(2), 'Mobi' => array(3), 'MSReader' => array(4), 'EPub' => array(6));
     
     /**
      * emagazines languages
-     * 
+     *
      * @var array
      */
     //public $emagazinesLanguages = array('ALL'=>'EN', 'EU'=>'EN', 'DE'=>'DE', 'ES'=>'ES', 'FR'=>'FR', 'IT'=>'IT', 'EN'=>'EN', 'US'=>'EN', 'CA'=>'EN', 'RU');
@@ -295,20 +295,20 @@ class Module_Content_Model extends Core_Model
     
     /**
      * Default emagazines language
-     * 
+     *
      * @var string
      */
     public $emagazinesDefLang = 'EN';
 
-     /**
-     * Territories for movies
-     * @var array
-     */
+    /**
+    * Territories for movies
+    * @var array
+    */
     public $moviesTerritories = array('GB','FR','DE','ES','IT');
     
     /**
      * Sort orders by content type
-     * 
+     *
      * @var array
      */
     public $sortOrders = array(
@@ -355,11 +355,15 @@ class Module_Content_Model extends Core_Model
         )
     );
 
-    public function getFilters($type, $terrId, $shopId = null){
-        if($shopId == null) $shopId = self::$SHOP['id'];
+    public function getFilters($type, $terrId, $shopId = null)
+    {
+        if ($shopId == null) {
+            $shopId = self::$SHOP['id'];
+        }
 
         // Get applicable filters
-        $filters = DB::fetchAll('
+        $filters = DB::fetchAll(
+            '
             SELECT filter_sql, auto_and
               FROM content_filters_v3
              WHERE shop_id = :shop
@@ -373,16 +377,16 @@ class Module_Content_Model extends Core_Model
         );
 
         $final = '';
-        foreach($filters as $filter){
+        foreach ($filters as $filter) {
             // if filter is empty then don't do anything
-            if(strlen(trim($filter['filter_sql'])) == 0){
+            if (strlen(trim($filter['filter_sql'])) == 0) {
                 continue;
             }
                     
             $start = '';
             $end = '';
 
-            if((int)$filter['auto_and'] === 1){
+            if ((int)$filter['auto_and'] === 1) {
                 $start = ' AND (';
                 $end = ')';
             }
@@ -399,12 +403,15 @@ class Module_Content_Model extends Core_Model
      * @param int $shopId default is null
      * @return array or null
      */
-    public function getFiltersSphinx($type, $terrId, $shopId = null) {
-        if ($shopId == null)
+    public function getFiltersSphinx($type, $terrId, $shopId = null)
+    {
+        if ($shopId == null) {
             $shopId = self::$SHOP['id'];
+        }
 
         // Get applicable filters
-        $filters = DB::fetchRow('
+        $filters = DB::fetchRow(
+            '
             SELECT filter_sphinx_json
               FROM content_filters_v3
              WHERE shop_id = :shop
@@ -419,8 +426,7 @@ class Module_Content_Model extends Core_Model
         );
 
         if (isset($filters['filter_sphinx_json']) && isset($filters['filter_sphinx_json']) != ''):
-            $shopFilters = json_decode($filters['filter_sphinx_json'], true);
-        else:
+            $shopFilters = json_decode($filters['filter_sphinx_json'], true); else:
             $shopFilters = null;
         endif;
 
@@ -429,12 +435,12 @@ class Module_Content_Model extends Core_Model
 
     public function getSalesforce()
     {
-        if($this->salesforce === null) {
+        if ($this->salesforce === null) {
             $time = time();
             $maintenance = Settings::app()->sfMaintenance;
-            if ($time >= $maintenance['unavailable']['begin'] && $time < $maintenance['unavailable']['end']){
+            if ($time >= $maintenance['unavailable']['begin'] && $time < $maintenance['unavailable']['end']) {
                 // We're in SF maintenance mode
-                if($this->request->isAjax()) {
+                if ($this->request->isAjax()) {
                     $seconds = (int)$maintenance['unavailable']['end'] - $time;
                     $runTime = array();
                     $runTime['total']   = $seconds;
@@ -449,8 +455,8 @@ class Module_Content_Model extends Core_Model
             }
             $this->salesforce = Library_Loader::Load('Library_Salesforce');
             $this->salesforce->connect(Settings::app()->sfConfig['user'], Settings::app()->sfConfig['pass']);
-            if(!$this->salesforce->isConnected()) {
-                if($this->request->isAjax()) {
+            if (!$this->salesforce->isConnected()) {
+                if ($this->request->isAjax()) {
                     $message = $this->TR->__('global.technicalErrorMessage', 'We are experiencing some technical difficulties, please try again later');
                     Template_Json::error($message);
                 }
@@ -463,7 +469,7 @@ class Module_Content_Model extends Core_Model
     public function getContentCurrency($toLower = false)
     {
         $country = $this->DAO('model', 'users')->getUserCountry();
-        if(array_key_exists($country, $this->currency)) {
+        if (array_key_exists($country, $this->currency)) {
             $currency = $this->currency[$country];
         } else {
             $currency = 'EUR';
@@ -473,15 +479,13 @@ class Module_Content_Model extends Core_Model
     
     public function getContentCountry($content)
     {
-        if(!array_key_exists($content, $this->content)) {
-
+        if (!array_key_exists($content, $this->content)) {
             return false;
         }
 
         $userCountry = $this->DAO('model', 'users')->getUserCountry();
-        if(isset($this->cataloguesCountry[$content][$userCountry])) {
+        if (isset($this->cataloguesCountry[$content][$userCountry])) {
             return $this->cataloguesCountry[$content][$userCountry];
-
         }
         return false;
     }
@@ -495,11 +499,11 @@ class Module_Content_Model extends Core_Model
     {
         $language = $this->abooksDefLang;
         $contentCountry = $this->getContentCountry('abooks');
-        if(isset($this->abooksLanguages[$contentCountry])) {
+        if (isset($this->abooksLanguages[$contentCountry])) {
             $language = $this->abooksLanguages[$contentCountry];
         }
         
-        if($asId) {
+        if ($asId) {
             return Library_Language::getInstance()->getIdByCode($language);
         }
         return $language;
@@ -509,11 +513,11 @@ class Module_Content_Model extends Core_Model
     {
         $language = $this->ebooksDefLang;
         $contentCountry = $this->getContentCountry('ebooks');
-        if(isset($this->ebooksLanguages[$contentCountry])) {
+        if (isset($this->ebooksLanguages[$contentCountry])) {
             $language = $this->ebooksLanguages[$contentCountry];
         }
         
-        if($asId) {
+        if ($asId) {
             return Library_Language::getInstance()->getIdByCode($language);
         }
         return $language;
@@ -523,11 +527,11 @@ class Module_Content_Model extends Core_Model
     {
         $language = $this->emagazinesDefLang;
         $contentCountry = $this->getContentCountry('emagazines');
-        if(isset($this->emagazinesLanguages[$contentCountry])) {
+        if (isset($this->emagazinesLanguages[$contentCountry])) {
             $language = $this->emagazinesLanguages[$contentCountry];
         }
         
-        if($asId) {
+        if ($asId) {
             return Library_Language::getInstance()->getIdByCode($language);
         }
         return $language;
@@ -536,7 +540,7 @@ class Module_Content_Model extends Core_Model
 //    public function getGiftcardsLanguage($asId = true)
 //    {
 //        $language = $this->giftcardsDefLang;
-//        
+//
 //        if($asId) {
 //            return Library_Language::getInstance()->getIdByCode($language);
 //        }
@@ -555,7 +559,7 @@ class Module_Content_Model extends Core_Model
     
     public function getContentId($content)
     {
-        if(array_key_exists($content, $this->content)) {
+        if (array_key_exists($content, $this->content)) {
             return $this->content[$content];
         }
         return null;
@@ -569,7 +573,7 @@ class Module_Content_Model extends Core_Model
     public function getTerritoryId($code)
     {
         $code = strtoupper($code);
-        if(array_key_exists($code, $this->catalogues)) {
+        if (array_key_exists($code, $this->catalogues)) {
             return $this->catalogues[$code];
         }
         return null;
@@ -578,7 +582,7 @@ class Module_Content_Model extends Core_Model
     public function getTerritoryCode($id)
     {
         $flipped = array_flip($this->catalogues);
-        if(array_key_exists($id, $flipped)) {
+        if (array_key_exists($id, $flipped)) {
             return $flipped[$id];
         }
         return null;
@@ -586,7 +590,7 @@ class Module_Content_Model extends Core_Model
     
     public function isContentSupported($content)
     {
-        if($this->getContentCountry($content)) {
+        if ($this->getContentCountry($content)) {
             return true;
         }
         return false;
@@ -597,7 +601,7 @@ class Module_Content_Model extends Core_Model
         $userCountry = $this->DAO('model', 'users')->getUserCountry();
         
         $shopId = isset($this->countriesId[$userCountry]) ? $this->countriesId[$userCountry] : 0;
-        if(empty($shopId)) {
+        if (empty($shopId)) {
             $shopId = 34;
         }
         return $shopId;
@@ -605,12 +609,12 @@ class Module_Content_Model extends Core_Model
     
     public function logIt($filename, $text)
     {
-         file_put_contents(VAR_PATH . 'logs/' . $filename, $text, FILE_APPEND | LOCK_EX);
+        file_put_contents(VAR_PATH . 'logs/' . $filename, $text, FILE_APPEND | LOCK_EX);
     }
     
     public function getPerPage()
     {
-        if(is_null($this->session->perPage)) {
+        if (is_null($this->session->perPage)) {
             $this->session->perPage = 50;
         }
         return $this->session->perPage;
@@ -627,29 +631,29 @@ class Module_Content_Model extends Core_Model
         
         // Store to session
         $sess = empty($this->session->letterCurrent) ? array() : $this->session->letterCurrent;
-        foreach($this->content as $key => $val) {
-            if(!isset($sess[$key])) {
+        foreach ($this->content as $key => $val) {
+            if (!isset($sess[$key])) {
                 $sess[$key] = 'a';
             }
         }
         
         // Check request|session
         $req = $this->request->get('letter');
-        if($req != '') {
+        if ($req != '') {
             $current = $req;
         } else {
             $current = $this->request->get('type') == '' ? $sess[$content] : '';
         }
         
         // Check
-        if($current != '') {
-            if(strpos($current, '-') === false && in_array($current, $this->letters)) {
+        if ($current != '') {
+            if (strpos($current, '-') === false && in_array($current, $this->letters)) {
                 $letter = $current;
-            } elseif(preg_match('/^([a-z]{2}-([a-z]{2}))$/s', $current)) {
+            } elseif (preg_match('/^([a-z]{2}-([a-z]{2}))$/s', $current)) {
                 $segments = explode('-', $current);
                 $letter = substr($segments[0], 0, 1);
                 $division = array(substr($segments[0], 1, 1), substr($segments[1], 1, 1));
-                if($letter != substr($segments[1], 0, 1) || !in_array(implode('-', $division), $this->lettersDivisions)) {
+                if ($letter != substr($segments[1], 0, 1) || !in_array(implode('-', $division), $this->lettersDivisions)) {
                     $current = '';
                 }
             } else {
@@ -658,11 +662,11 @@ class Module_Content_Model extends Core_Model
         }
         
         // Process
-        if($current != '') {
+        if ($current != '') {
             $container['current'] = $current;
             $container['divisions'] = $this->getLetterDivisions($letter);
             $container['sql'] = $this->getLetterSql($letter, $dbField, (isset($division) ? $division : null));
-            if($this->request->get('letter') == '') {
+            if ($this->request->get('letter') == '') {
                 $this->request->requestCurrent = $this->request->requestCurrent . '/letter/' . $current;
             }
             $sess[$content] = $current;
@@ -675,8 +679,8 @@ class Module_Content_Model extends Core_Model
     public function getLetterDivisions($letter)
     {
         $divisions = array();
-        if(!is_numeric($letter)) {
-            foreach($this->lettersDivisions as $division) {
+        if (!is_numeric($letter)) {
+            foreach ($this->lettersDivisions as $division) {
                 $division = explode('-', $division);
                 $division1 = $letter . $division[0];
                 $division2 = $letter . $division[1];
@@ -688,8 +692,8 @@ class Module_Content_Model extends Core_Model
     
     public function getLetterSql($letter, $dbField, $division)
     {
-        if(!empty($letter) && !empty($dbField)) {
-            if(empty($division)) {
+        if (!empty($letter) && !empty($dbField)) {
+            if (empty($division)) {
                 return " AND $dbField LIKE " . DB::quote($letter . '%');
             } else {
                 $range = $division[0] . '-' . $division[1];
@@ -709,14 +713,14 @@ class Module_Content_Model extends Core_Model
         
         $sessVar = 'sortOrder' . ucfirst($content);
         $sessVal = $this->session->{$sessVar};
-        if($sessVal === null) {
+        if ($sessVal === null) {
             $this->session->{$sessVar} = $return['current'];
         } else {
             $return['current'] = $sessVal;
         }
         
         $return['sql'] = $this->sortOrders[$content][$return['current']]['field'] . ' ' . $this->sortOrders[$content][$return['current']]['direction'];
-        if($return['current'] > 0) {
+        if ($return['current'] > 0) {
             $return['sql'] .= ', ' . $this->sortOrders[$content][0]['field'] . ' asc';
         }
                  
@@ -725,14 +729,14 @@ class Module_Content_Model extends Core_Model
     
     public function addObserver($observer, $args = null)
     {
-        if(array_key_exists(self::$SHOP['abbreviation'], Settings::app()->observers)) {
-            foreach(Settings::app()->observers[self::$SHOP['abbreviation']] as $name => $data) {
-                if(strtolower($name) == strtolower($observer)) {
-                    if(is_string($data)) {
+        if (array_key_exists(self::$SHOP['abbreviation'], Settings::app()->observers)) {
+            foreach (Settings::app()->observers[self::$SHOP['abbreviation']] as $name => $data) {
+                if (strtolower($name) == strtolower($observer)) {
+                    if (is_string($data)) {
                         $data = array('observer', $data);
                     }
                     $object = $this->DAO($data[0], $data[1]);
-                    if($object instanceof Core_Model && method_exists($object, $name)) {
+                    if ($object instanceof Core_Model && method_exists($object, $name)) {
                         return $object->$name($args);
                     }
                 }
@@ -744,29 +748,28 @@ class Module_Content_Model extends Core_Model
     {
         return true;
         $device = Loader::load('Library_Wurfl')->manager()->getDeviceForHttpRequest($_SERVER);
-        if($device->getCapability('is_wireless_device') == 'true' || $device->getCapability('is_tablet') == 'true') {
+        if ($device->getCapability('is_wireless_device') == 'true' || $device->getCapability('is_tablet') == 'true') {
             return true;
         }
         return false;
     }
 
-    public function getRealTerritory(){
-
+    public function getRealTerritory()
+    {
         $catalogue = $this->DAO('model', 'users')->getUserCountry();
-            return $this->catalogues[strtoupper($catalogue)];
+        return $this->catalogues[strtoupper($catalogue)];
 
         $sessCatalogue = $this->session->showCatalogue;
         if (!empty($sessCatalogue) && isset($this->catalogues[strtoupper($sessCatalogue)])) {
             return $this->catalogues[strtoupper($sessCatalogue)];
         }
-        
     }
     public function isPlatformEnabled($contentType)
     {
         $setting = Library_Platforms::getSettings($contentType);
         
         // If setting is just true or false, return
-        if ($setting === true || $setting === false){
+        if ($setting === true || $setting === false) {
             return $setting;
         }
 
@@ -780,7 +783,7 @@ class Module_Content_Model extends Core_Model
         }
 
         $check = $platformId & $setting;
-        if($check === (int)0){
+        if ($check === (int)0) {
             // Bit not found, not enabled for content type
             return false;
         }
@@ -788,24 +791,33 @@ class Module_Content_Model extends Core_Model
         return true;
     }
 
-    public function getContentTypeId($contentType){
+    public function getContentTypeId($contentType)
+    {
         $result = DB::fetchOne('SELECT id FROM content_types WHERE name = ?', array(strtolower($contentType)));
         return $result;
     }
 
-    public function getOrderId($content){
-        if(!is_numeric($content)) $content = $this->getContentId($content);
-        if(!isset($this->contentAbbr[$content])) throw new Exception('Cannot generate order ID without valid content type');
+    public function getOrderId($content)
+    {
+        if (!is_numeric($content)) {
+            $content = $this->getContentId($content);
+        }
+        if (!isset($this->contentAbbr[$content])) {
+            throw new Exception('Cannot generate order ID without valid content type');
+        }
         $abbr = $this->contentAbbr[$content];
 
         $userId = $this->auth->getLogged('Id');
-        if(!$userId) throw new Exception('Cannot generate order ID without user ID');
+        if (!$userId) {
+            throw new Exception('Cannot generate order ID without user ID');
+        }
 
         $orderId = strtoupper($abbr) . $userId . time();
         return $orderId;
     }
 
-    public function getThreatMetrixParams($content, $data){
+    public function getThreatMetrixParams($content, $data)
+    {
         $geoIp = Loader::loadHelper('geoip');
 
         $params = array(
@@ -825,12 +837,12 @@ class Module_Content_Model extends Core_Model
             'local_attrib_6'=>$countryCode = $geoIp->geoip_country_code_by_addr($_SERVER['REMOTE_ADDR'])
         );
 
-        foreach($params as $key => $param){
-            if($param === false || $param === null || $param === '') unset($params[$key]);
+        foreach ($params as $key => $param) {
+            if ($param === false || $param === null || $param === '') {
+                unset($params[$key]);
+            }
         }
 
         return $params;
     }
 }
-
-?>
